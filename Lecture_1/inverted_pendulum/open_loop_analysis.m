@@ -1,5 +1,13 @@
 close all;
 
+%% Cart Models
+q = (M+m)*(I+m*l^2)-(m*l)^2; % Denominator
+s = tf('s');
+
+P_cart = (((I+m*l^2)/q)*s^2 - (m*g*l/q))/(s^4 + (b*(I + m*l^2))*s^3/q - ((M + m)*m*g*l)*s^2/q - b*m*g*l*s/q);
+
+P_pend = (m*l*s/q)/(s^3 + (b*(I + m*l^2))*s^2/q - ((M + m)*m*g*l)*s/q - b*m*g*l/q);
+
 %% Pendulum Transfer Function Analysis
 figure
 % Layout: 2 rows, 2 cols
