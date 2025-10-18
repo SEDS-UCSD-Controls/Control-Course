@@ -1,3 +1,7 @@
+%{
+NOTE: Run this file before the simulations
+%}
+
 %% Physical Parameters
 M = 0.5;   % kg
 m = 0.2;   % kg
